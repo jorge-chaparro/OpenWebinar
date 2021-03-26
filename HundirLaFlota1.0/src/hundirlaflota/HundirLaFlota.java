@@ -41,6 +41,8 @@ public class HundirLaFlota {
 		//Posiciones de la tirada
 		int[] tiro = new int[2];
 		
+		inicializacion(mapaUsuario, mapaOrdenador);
+		
 		while(!juegoTerminado) {
 			
 			//Al principio del turno, pintamos el mapa del usuario
@@ -87,7 +89,7 @@ public class HundirLaFlota {
 			//Si no ha ganado el jugador, le toca a la máquina
 			if(!juegoTerminado) {
 				
-				System.out.printf("PUNTOS RESTANTES DEL ORDENADOR; %d\n\n", puntosOrdenador);
+				System.out.printf("PUNTOS RESTANTES DEL ORDENADOR: %d\n\n", puntosOrdenador);
 				System.out.println("TURNO DEL ORDENADOR");
 				
 				tiroCorrecto = false;
@@ -250,7 +252,6 @@ public class HundirLaFlota {
 		
 		//Comprobamos que lo que ha introducido el usuario es cierto mediante una expresión regular.
 		if(linea.matches("^[A-Z][0-9]*$")) {
-			
 			//Obtenemos la letra
 			//Suponemos que como mucho, obtenemos una letra del abecedario
 			char letra = linea.charAt(0);
