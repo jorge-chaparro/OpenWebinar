@@ -221,22 +221,22 @@ public class HundirLaFlota {
 		}
 		
 		//Imprimimos la fila de encabezado
-		System.out.println("     ");
+		System.out.print("   ");
 		for(int i=0; i<TAMANIO; i++) {
 			System.out.print("[" + i + "] ");
 		}
 		
-		System.out.print("");
+		System.out.println("");
 		
 		//Imprimimos el resto de filas
 		for(int i=0; i<TAMANIO; i++) {
-			System.out.println("[" + letras[i] + "] ");
+			System.out.print("[" + letras[i] + "] ");
 			
 			for(int j=0; j < TAMANIO; j++) {
 				System.out.print(mapa[i][j] + "   ");
 			}
 			
-			System.out.print("");
+			System.out.println("");
 		}
 	}
 	
